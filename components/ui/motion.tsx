@@ -1,40 +1,50 @@
 "use client"
 
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, ComponentPropsWithoutRef } from 'react';
+
+interface MotionProps extends ComponentPropsWithoutRef<'div'> {
+  initial?: Record<string, any>;
+  animate?: Record<string, any>;
+  transition?: Record<string, any>;
+}
+
+interface UseInViewOptions extends IntersectionObserverInit {
+  once?: boolean;
+}
 
 // Create a context for prefersReducedMotion
 const MotionContext = createContext(false);
 
 // Simple stub for motion component
 export const motion = {
-  div: React.forwardRef((props, ref) => {
+  div: React.forwardRef<HTMLDivElement, MotionProps>((props, ref) => {
     const { initial, animate, transition, ...rest } = props;
     return <div ref={ref} {...rest} />;
   }),
-  p: React.forwardRef((props, ref) => {
+  p: React.forwardRef<HTMLParagraphElement, MotionProps>((props, ref) => {
     const { initial, animate, transition, ...rest } = props;
     return <p ref={ref} {...rest} />;
   }),
-  h1: React.forwardRef((props, ref) => {
+  h1: React.forwardRef<HTMLHeadingElement, MotionProps>((props, ref) => {
     const { initial, animate, transition, ...rest } = props;
     return <h1 ref={ref} {...rest} />;
   }),
-  h2: React.forwardRef((props, ref) => {
+  h2: React.forwardRef<HTMLHeadingElement, MotionProps>((props, ref) => {
     const { initial, animate, transition, ...rest } = props;
     return <h2 ref={ref} {...rest} />;
   }),
-  h3: React.forwardRef((props, ref) => {
+  h3: React.forwardRef<HTMLHeadingElement, MotionProps>((props, ref) => {
     const { initial, animate, transition, ...rest } = props;
     return <h3 ref={ref} {...rest} />;
   }),
-  span: React.forwardRef((props, ref) => {
+  span: React.forwardRef<HTMLSpanElement, MotionProps>((props, ref) => {
     const { initial, animate, transition, ...rest } = props;
     return <span ref={ref} {...rest} />;
   }),
 };
 
 // Hook to check if element is in view
-export function useInView(ref, options = {}) {
+export function useInView(ref: React.RefObject<Element>, options: UseInViewOptions = {}) {
   const [isInView, setIsInView] = React.useState(false);
 
   React.useEffect(() => {
