@@ -8,7 +8,7 @@ import Footer from '@/components/layout/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://expensez.app'),
+  metadataBase: new URL('https://expensez.princedubey.com'),
   title: 'ExpenseZ - Best Personal Finance & Expense Tracking App',
   description: 'ExpenseZ is the #1 expense tracking and personal finance management app. Track expenses, manage budgets, and gain financial insights with our intuitive and powerful mobile app. Download now for free!',
   keywords: [
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     'expense calculator',
     'money management app'
   ].join(', '),
-  authors: [{ name: 'ExpenseZ Team', url: 'https://expensez.app' }],
+  authors: [{ name: 'ExpenseZ Team', url: 'https://expensez.princedubey.com' }],
   creator: 'ExpenseZ',
   publisher: 'ExpenseZ',
   openGraph: {
     title: 'ExpenseZ - Best Personal Finance & Expense Tracking App',
     description: 'Track expenses, manage budgets, and gain financial insights with ExpenseZ - the #1 expense tracking and personal finance management app. Download now for free!',
-    url: 'https://expensez.app',
+    url: 'https://expensez.princedubey.com',
     siteName: 'ExpenseZ',
     images: [
       {
@@ -82,9 +82,9 @@ export const metadata: Metadata = {
     yandex: 'your-yandex-verification',
   },
   alternates: {
-    canonical: 'https://expensez.app',
+    canonical: 'https://expensez.princedubey.com',
     languages: {
-      'en-US': 'https://expensez.app',
+      'en-US': 'https://expensez.princedubey.com',
     },
   },
   category: 'finance',
