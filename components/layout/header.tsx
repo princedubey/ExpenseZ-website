@@ -7,6 +7,7 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import AnimatedText from '@/components/ui/animated-text';
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -33,10 +34,9 @@ const Header = () => {
     )}>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">EZ</span>
-          </div>
-          <span className="font-bold text-xl">ExpenseZ</span>
+          <Image src="/expensez-logo.png" alt="ExpenseZ Logo" width={50} height={50} 
+          className='rounded-full bg-white transition-all duration-300'/>
+          <AnimatedText />
         </Link>
         
         {/* Desktop Navigation */}

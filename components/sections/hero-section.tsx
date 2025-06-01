@@ -20,7 +20,7 @@ const HeroSection = () => {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Master Your Finances with{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-red-500">
                 ExpenseZ
               </span>
             </h1>
