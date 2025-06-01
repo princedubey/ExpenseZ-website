@@ -10,6 +10,7 @@ import {
   Linkedin, 
   Github 
 } from 'lucide-react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -18,9 +19,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">EZ</span>
-              </div>
+              <Image src="/expensez-logo.png" alt="ExpenseZ Logo" width={50} height={50} 
+              className='rounded-full bg-white'/>
               <span className="font-bold text-xl">ExpenseZ</span>
             </div>
             <p className="text-muted-foreground">

@@ -35,7 +35,7 @@ const AnimatedText = () => {
   }, []);
 
   return (
-    <div className="relative h-[1.5em] w-[200px]">
+    <div className="relative h-[2em] w-[200px] flex items-center">
       <AnimatePresence mode="wait">
         {isVisible && (
           <motion.span
@@ -47,7 +47,7 @@ const AnimatedText = () => {
               duration: 0.2,
               ease: "easeInOut"
             }}
-            className="absolute inset-0 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-red-500"
+            className="absolute inset-0 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-red-500 leading-tight"
           >
             {phrases[currentIndex]}
           </motion.span>
